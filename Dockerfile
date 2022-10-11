@@ -25,6 +25,7 @@ RUN apk add --no-cache alpine-sdk linux-headers \
  #&& echo "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py3-none-any.whl" | pip install --no-cache-dir -r /dev/stdin \
  && pip install --no-cache-dir --upgrade Flask-WTF==0.14.3 \
  && pip install simple-websocket \
+ && pip install MarkupSafe==2.0.1 \
  && apk del alpine-sdk linux-headers
 
 EXPOSE 5050
