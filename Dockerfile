@@ -15,7 +15,7 @@ RUN apk add --no-cache libedit postgresql \
 
 RUN apk add --no-cache postgresql-dev libffi-dev zlib-dev jpeg-dev
 
-ENV PGADMIN_VERSION=6.3
+ENV PGADMIN_VERSION=5.6
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
