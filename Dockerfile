@@ -21,7 +21,8 @@ ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 
 RUN apk add --no-cache alpine-sdk linux-headers \
  && pip install --upgrade pip \
- && echo "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py3-none-any.whl" | pip install --no-cache-dir -r /dev/stdin \
+ && echo "https://files.pythonhosted.org/packages/6f/96/9eded640d4dedfcf716dc9a2b74c8540bcc0755992b109d8f6dba735c1c9/pgadmin4-5.6-py3-none-any.whl" | pip install --no-cache-dir -r /dev/stdin \
+ #&& echo "https://ftp.postgresql.org/pub/pgadmin/pgadmin4/v${PGADMIN_VERSION}/pip/pgadmin4-${PGADMIN_VERSION}-py3-none-any.whl" | pip install --no-cache-dir -r /dev/stdin \
  && pip install --no-cache-dir --upgrade Flask-WTF==0.14.3 \
  && pip install simple-websocket \
  && apk del alpine-sdk linux-headers
