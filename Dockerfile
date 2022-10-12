@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.7-alpine
 
 # create a non-privileged user to use at runtime
 RUN addgroup -g 50 -S pgadmin \
